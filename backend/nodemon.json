@@ -1,0 +1,9 @@
+{
+  "execMap": {
+    "js": "sucrase-node"
+  },
+  "ignore": [
+    "__tests__",
+    "node_modules"
+  ]
+}

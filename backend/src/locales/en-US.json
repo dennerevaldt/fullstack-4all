@@ -1,0 +1,17 @@
+{
+  "error.notFound": "Not found",
+  "error.internalServer": "Internal server error",
+  "middleware.tokenNotProvide": "Token not provided",
+  "middleware.cpfExistent": "CPF existent another user",
+  "middleware.userNotFound": "User not found",
+  "middleware.userNotBenefited": "User is not benefited for you",
+  "session.userNotFound": "User not found",
+  "transference.success": "Transferred with success",
+  "transference.insufficientBalance": "Insufficient balance at your account",
+  "transference.useLimit": "Transferred using your limit",
+  "form.error.string.min": "Invalid value, is shorter than authorized",
+  "form.error.string.max": "Invalid value, is bigger than authorized",
+  "form.error.required": "Required field",
+  "form.error.number.min": "Invalid value, is shorter than authorized",
+  "form.error.number.max": "Invalid value, is bigger than authorized"
+}

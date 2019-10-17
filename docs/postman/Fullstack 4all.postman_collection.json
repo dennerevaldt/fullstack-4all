@@ -1,0 +1,455 @@
+{
+	"info": {
+		"_postman_id": "330a408a-6e6f-494e-859e-add0190dd367",
+		"name": "Fullstack 4all",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sessions",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"cpf\": \"03523041031\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/sessions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"sessions"
+							]
+						},
+						"description": "Endpoint para criação de uma sessão e geração de um token JWT para o usuário."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Denner Machado\",\n\t\"cpf\": \"03523041031\",\n\t\"phone\": \"5551997036676\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": "Endpoint para criação de usuário.\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTcwNDA4MTk5LCJleHAiOjE1NzA0OTQ1OTl9.a-Ie6khWv6yZzS2DQNq8HIAXkjdyzyf52Yr-IcS7BKo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Denner Evaldt\",\n\t\"phone\": \"5551997036699\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": "Endpoint para atualização de usuário.\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTcwNTc3MTA2LCJleHAiOjE1NzA2NjM1MDZ9.GkZU78y1QJhPa-WBrj-tulhFaa99M_-HUBkbTjJ2kYY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": "Endpoint para remoção de usuário.\n"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Benefited",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNTcwNDkzOTA3LCJleHAiOjE1NzA1ODAzMDd9.2ciOPZu9vFzW2dsFLodf4jO6c83Dgb0fUjHZ9Po85yw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/benefited",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"benefited"
+							]
+						},
+						"description": "Endpoint para listagem de beneficiados de um usuário logado.\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTcwNDk3NzkwLCJleHAiOjE1NzA1ODQxOTB9.VVtUyajXcuTL3dQGuBMVF0P5eLt6inF9ASsp62ZtAWE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"José Machado\",\n\t\"cpf\": \"03523041023\",\n\t\"phone\": \"5551997036676\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/benefited",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"benefited"
+							]
+						},
+						"description": "Endpoint para criação de um beneficiado de um usuário logado.\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiaWF0IjoxNTcwNDU1Nzg2LCJleHAiOjE1NzA1NDIxODZ9.5tH6f1aojkZ5IRcvVKXxR_KAOoPPoZ0MKgcH-1v2k5k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Josélito\",\n\t\"phone\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/benefited/11",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"benefited",
+								"11"
+							]
+						},
+						"description": "Endpoint para atualização de um beneficiado de um usuário logado.\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNTcwNDkzOTA3LCJleHAiOjE1NzA1ODAzMDd9.2ciOPZu9vFzW2dsFLodf4jO6c83Dgb0fUjHZ9Po85yw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/benefited/15",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"benefited",
+								"15"
+							]
+						},
+						"description": "Endpoint para remoção de um beneficiado de um usuário logado.\n"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ee55ff8b-f7fc-475c-9f3f-43ba22a42886",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "d38ce83c-28c4-469c-ba2d-a7efb048a1ce",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Balance",
+			"item": [
+				{
+					"name": "Balance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTcwNDk3NzkwLCJleHAiOjE1NzA1ODQxOTB9.VVtUyajXcuTL3dQGuBMVF0P5eLt6inF9ASsp62ZtAWE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/balances",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"balances"
+							]
+						},
+						"description": "Endpoint com retorno do saldo e limites de um usuário logado.\n"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Transference",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTcwNTgwNDIyLCJleHAiOjE1NzA2NjY4MjJ9.XkQY9xTvjcWZ0wmd_spRvzbapSXiAo364x-6Mhl115E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"value\": 1000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/transferences/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transferences",
+								"3"
+							]
+						},
+						"description": "Endpoint para realização de uma transferência de valores entre um usuário logado e seu beneficiado.\n"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Bank Statement",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTcwNTgwNDIyLCJleHAiOjE1NzA2NjY4MjJ9.XkQY9xTvjcWZ0wmd_spRvzbapSXiAo364x-6Mhl115E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/bank-statements",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"bank-statements"
+							]
+						},
+						"description": "Endpoint para listagem do extrato de transações realizados pelo usuário logado.\n"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

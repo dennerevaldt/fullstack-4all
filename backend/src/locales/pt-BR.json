@@ -1,0 +1,17 @@
+{
+  "error.notFound": "Não encontrado",
+  "error.internalServer": "Erro interno do servidor",
+  "middleware.tokenNotProvide": "Token não fornecido",
+  "middleware.cpfExistent": "CPF já existe para outro usuário",
+  "middleware.userNotFound": "Usuário não encontrado",
+  "middleware.userNotBenefited": "Usuário não é seu beneficiado",
+  "session.userNotFound": "Usuário não encontrado",
+  "transference.success": "Transferido com sucesso",
+  "transference.insufficientBalance": "Saldo insuficiente para realizar a transferência",
+  "transference.useLimit": "Transferido usando seu limite",
+  "form.error.string.min": "Valor inválido, é menor que permitido",
+  "form.error.string.max": "Valor inválido, é maior que permitido",
+  "form.error.required": "Campo obrigatório, preencha-o para continuar",
+  "form.error.number.min": "Valor inválido, é menor que permitido",
+  "form.error.number.max": "Valor inválido, é maior que permitido"
+}
